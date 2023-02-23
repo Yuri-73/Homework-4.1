@@ -50,48 +50,41 @@ public class Main {
    }
    public static void task4() {
       System.out.println("Задача 4");
-      int deposit = 15000; // Ежемесячный вклад
+      int deposit = 15000; // Вклад
       int percent = 7; // Процент каждого месяца
-      int total = 0; // Накопления промежуточные и общее накопление
-      int month = 0; // Месяц
+      int month = 1; // Месяц
       int sum = 12_000_000; // Окончательная сумма накоплений
-      int i = 0;
 
-      for (; total <= 12_000_000; i++) {
-         total = total + percent * (total / 100);
-         total = total + deposit;
-         System.out.println("Месяц " + i + ". Итого " + total);
+      for (; deposit <= sum; month++) {
+         deposit = deposit + percent * (deposit / 100);
+         System.out.println("Месяц " + month + ". Итого " + deposit);
       }
    }
    public static void task5() {
       System.out.println("Задача 5");
-      int deposit = 15000; // Ежемесячные вложения, первая сумма
+      int deposit = 15000; // Вклад
       int percent = 7; // Процент за каждый месяц
-      int total = 0; // Накопления промежуточные и общее накопление
-      int month = 0; // Месяц
+      int month = 1; // Месяц
       int sum = 12_000_000; // Окончательная сумма накоплений
 
-      for (; total <= 12_000_000; month++) {
-         total = total + percent * (total / 100);
-         total = total + deposit;
-         if(month % 6 == 0 && month != 0)
-            System.out.println("Месяц " + month + ". Итого " + total);
+      for (; deposit <= sum; month++) {
+         deposit = deposit + percent * (deposit / 100);
+         if(month % 6 == 0)
+            System.out.println("Месяц " + month + ". Итого " + deposit);
       }
    }
    public static void task6() {
       System.out.println("Задача 6");
-      int deposit = 15000; // Ежемесячный вклад
+      int deposit = 15000; // Вклад
       int percent = 7; // Процент за каждый месяц
-      int total = 0; // Накопления промежуточные и общее накопление
       int numberOfMonths = 9 * 12; // Количество месяцев накопления
       int sum; // Окончательная сумма накоплений
-      int month = 0;
+      int month = 1;
 
       for (; month <= numberOfMonths; month++) {
-         total = total + percent * (total / 100);
-         total = total + deposit;
-         if(month % 6 == 0 && month != 0)
-            System.out.println("Месяц " + month + ". Итого " + total);
+         deposit = deposit + percent * (deposit / 100);
+         if(month % 6 == 0)
+            System.out.println("Месяц " + month + ". Итого " + deposit);
       }
    }
    public static void task7() {
